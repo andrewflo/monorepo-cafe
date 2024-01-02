@@ -10,8 +10,9 @@
   "author": "",
   "license": "ISC",
   "workspaces": [
-    "packages/database",
     "apps/server",
-    "apps/shop"
+    "apps/shop",
+    "packages/database",
+    "packages/ui"
   ]
 }
