@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "db:generate": "npm run db:generate --workspace=packages/database",
-    "server:start": "npm run start --workspace=apps/server"
+    "server:start": "npm run start --workspace=apps/server",
+    "shop:build": "npm run build --workspace=apps/shop"
   },
   "keywords": [],
   "author": "",
