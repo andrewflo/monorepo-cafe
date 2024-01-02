@@ -9,7 +9,8 @@ function App() {
   const [products, setProducts] = useState<Product[]>([]);
 
   async function fetchProducts() {
-    const products = await axios.get<Product[]>('http://localhost:8080/api/products');
+    const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || '';
+    const products = await axios.get<Product[]>(API_BASE_URL + '/api/products');
     setProducts(products.data);
   }
 
