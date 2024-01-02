@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "server": "cd apps/server && npm run start"
+    "db:generate": "npm run db:generate --workspace=packages/database",
+    "server:start": "npm run start --workspace=apps/server"
   },
   "keywords": [],
   "author": "",
