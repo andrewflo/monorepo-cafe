@@ -1,16 +1,17 @@
-import { useState } from 'react';
+import { Product } from '@monorepo/database';
 import { Button } from '@monorepo/ui';
 import axios from 'axios';
-import { Product } from '@monorepo/database';
+import { useState } from 'react';
 import './index.css';
+
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || '';
 
 function App() {
   const [count, setCount] = useState(0);
   const [products, setProducts] = useState<Product[]>([]);
 
   async function fetchProducts() {
-    const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || '';
-    const products = await axios.get<Product[]>(API_BASE_URL + '/api/products');
+    const products = await axios.get<Product[]>('/api/products', { baseURL: API_BASE_URL });
     setProducts(products.data);
   }
 
