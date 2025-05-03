@@ -1,6 +1,8 @@
 # Monorepo Cafe
 
-An example monorepo setup using pnpm workspaces, demonstrating a modern full-stack application structure with shared packages.
+An example monorepo setup using pnpm workspaces demonstrating a full-stack application with shared packages.
+
+See this project deployed at: https://monorepo-cafe-shop.onrender.com
 
 ## Project Structure
 
