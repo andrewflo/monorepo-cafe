@@ -42,13 +42,28 @@ The applications and packages are connected using pnpm workspace dependencies, a
    pnpm install
    ```
 
-3. Generate Prisma client:
+3. Set up environment variables:
+
+   ```bash
+   # Copy example env files
+   cp apps/client/.env.example apps/client/.env
+   cp apps/server/.env.example apps/server/.env
+   cp packages/database/.env.example packages/database/.env
+   ```
+
+   Update the `.env` files with your local configuration values.
+
+4. Setup Postgres database:
+
+   Start Postgres on your machine and add a database named `monorepo_cafe` or whatever name you'd like that matches your `packages/database/.env` file `DATABASE_URL` configuration.
+
+5. Generate Prisma client:
 
    ```bash
    pnpm db:generate
    ```
 
-4. Start the development servers:
+6. Start the development servers:
    ```bash
    pnpm dev
    ```
