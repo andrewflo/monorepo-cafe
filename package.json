@@ -6,8 +6,8 @@
   "scripts": {
     "db:generate": "pnpm --filter @monorepo/database db:generate",
     "server:start": "pnpm --filter @monorepo/server start",
-    "shop:build": "pnpm --filter @monorepo/shop build",
-    "dev": "concurrently \"pnpm --filter @monorepo/server dev\" \"pnpm --filter @monorepo/shop dev\""
+    "client:build": "pnpm --filter @monorepo/client build",
+    "dev": "concurrently \"pnpm --filter @monorepo/server dev\" \"pnpm --filter @monorepo/client dev\""
   },
   "keywords": [],
   "author": "",
