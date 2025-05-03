@@ -4,17 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "db:generate": "npm run db:generate --workspace=packages/database",
-    "server:start": "npm run start --workspace=apps/server",
-    "shop:build": "npm run build --workspace=apps/shop"
+    "db:generate": "pnpm --filter @monorepo/database db:generate",
+    "server:start": "pnpm --filter @monorepo/server start",
+    "shop:build": "pnpm --filter @monorepo/shop build",
+    "dev": "concurrently \"pnpm --filter @monorepo/server dev\" \"pnpm --filter @monorepo/shop dev\""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "workspaces": [
-    "apps/server",
-    "apps/shop",
-    "packages/database",
-    "packages/ui"
-  ]
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
 }
