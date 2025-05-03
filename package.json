@@ -4,10 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "db:generate": "pnpm --filter @monorepo/database db:generate",
-    "server:start": "pnpm --filter @monorepo/server start",
+    "dev": "concurrently \"pnpm --filter @monorepo/server dev\" \"pnpm --filter @monorepo/client dev\"",
     "client:build": "pnpm --filter @monorepo/client build",
-    "dev": "concurrently \"pnpm --filter @monorepo/server dev\" \"pnpm --filter @monorepo/client dev\""
+    "server:start": "pnpm --filter @monorepo/server start",
+    "db:generate": "pnpm --filter @monorepo/database db:generate",
+    "db:push": "pnpm --filter @monorepo/database db:push"
   },
   "keywords": [],
   "author": "",
