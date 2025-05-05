@@ -59,10 +59,10 @@ The applications and packages are connected using pnpm workspace dependencies, a
 
    Start Postgres on your machine and add a database named `monorepo_cafe` or whatever name you'd like that matches your `packages/database/.env` file `DATABASE_URL` configuration.
 
-5. Generate Prisma client:
+5. Run migration & generate Prisma client:
 
    ```bash
-   pnpm db:generate
+   pnpm db:migrate
    ```
 
 6. Start the development servers:
@@ -80,5 +80,6 @@ This will start both the client and server applications concurrently:
 - `pnpm dev` - Start both client and server in development mode
 - `pnpm client:build` - Build the client application
 - `pnpm server:start` - Start the server in production mode
+- `pnpm db:migrate` - Run database migrations
 - `pnpm db:generate` - Generate Prisma client
 - `pnpm db:push` - Push database schema changes

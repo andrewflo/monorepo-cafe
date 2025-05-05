@@ -7,6 +7,7 @@
     "dev": "concurrently \"pnpm --filter @monorepo/server dev\" \"pnpm --filter @monorepo/client dev\"",
     "client:build": "pnpm --filter @monorepo/client build",
     "server:start": "pnpm --filter @monorepo/server start",
+    "db:migrate": "pnpm --filter @monorepo/database db:migrate",
     "db:generate": "pnpm --filter @monorepo/database db:generate",
     "db:push": "pnpm --filter @monorepo/database db:push"
   },
